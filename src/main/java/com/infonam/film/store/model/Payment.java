@@ -8,6 +8,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 @Entity
 @Table(name="payment", catalog="sakila")
@@ -16,13 +18,16 @@ public class Payment {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="payment_id", unique=true,nullable=false)
 	private int payment_id;
+	@JoinColumn(name="customer_id",nullable=false)
 	private Customer customer;
 	private Staff taff;
 	private Rental rental;
 	private float amount;
 	private Date payment_date;
 	private Timestamp last_update;
-	
+	public Payment() {
+		super();
+	}
 	public int getPayment_id() {
 		return payment_id;
 	}
