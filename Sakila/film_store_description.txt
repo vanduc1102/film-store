@@ -1,0 +1,7 @@
+﻿1. staff login.
+2. list display all film.
+3. search film for customer.
+4. search customer --> if not found --> add new customer.
+( have page contain all customer --> for change information of customer).
+5. add rental for customer.
+6. return to 2.
