@@ -30,4 +30,23 @@ public class TestConnection {
 		}
 		System.out.println(i + " : " +j);
 	}
+	@Test
+	public void testProgram(){
+		int a[]={1,2,3,4,-5,-1,2,-3,4,-6};
+		int a1 =a[1];
+		int a2 =a[0];
+		int b = 0;
+		for( int i = 0 ; i < a.length ; i++){
+			b = a[i];
+			if(b > 0 && b < a1)
+				a1 = b;
+			if(b < 0 && -b != a1 && (-b) <= a2)
+				a2 = b;
+//			if (b > 0 && b !=a1 && a1 < b)
+//				a2 = b;
+		}
+		System.out.println("a1 = "+a1+"\na2 = "+a2);
+		System.out.println("\nResult : "+(a1+a2));
+		
+	}
 }
